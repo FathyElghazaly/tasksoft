@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - master
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: 'before'
+       run: ls
+
+     - uses: actions/checkout@v3
+
+     - name: 'login to docker hub'
+       run: docker login --username FathyElghazaly --password dockerhubghazaly
